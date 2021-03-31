@@ -36,7 +36,7 @@ void loop()
   if(getTemperatura() > 30){
     ledAzul(true);
   }else{
-  	ledAzul(falso); 
+  	ledAzul(false); 
   }
   	
   delay(10);
