@@ -1,18 +1,21 @@
 //variaveis da led
 const int vermelho = 5;
 const int verde = 6;
-const int azul = 7
-
+const int azul = 7;
 bool estadoLedVermelho = false;
 
 const int botao1 = 2;
+const int botao2 = 3;
+
 unsigned long lastDebounceTime1 = 0;
+unsigned long lastDebounceTime2 = 0;
+
 const int botaoDelay = 100;
 
 void setup()
 {
   pinMode(A0, INPUT);
-  pinMode(A1, INPUT);
+  pinMode(A1, OCTPUT);
   
   pinMode(vermelho, OUTPUT);
   pinMode(verde, OUTPUT);
@@ -34,20 +37,20 @@ void loop()
   }
   
   //verificador de tempetura
-  if(getTemperatura() > 30){
+  if(getTemperatura() > (15){
     ledAzul(true);
   }else{
-  	ledAzul(falso); 
+  	ledAzul(false); 
   }
   	
   delay(10);
 }
 
-void ledVermelho(){
+void ledVermelho()
   estadoLedVermelho = !estadoLedVermelho;
   digitalWrite(vermelho,estadoLedVermelho);
 }
-void ledVerde(){
+void ledVerde(booe estado){
  //precisa fazer  
 }
 void ledAzul(bool estado){
